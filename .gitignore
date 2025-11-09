@@ -1,0 +1,63 @@
+# Cognitive Synergy Architecture .gitignore
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+*.sqlite3
+*.db
+*.env
+.env*
+.venv/
+venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Test and coverage
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Ruff, mypy, etc.
+.mypy_cache/
+.ruff_cache/
+
+# Neo4j
+neo4j_data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docs build
+/docs/_build/
+
+# Examples
+examples/__pycache__/
+
+# Ignore local config
+*.local
+
+# PSL
+psl_cache/
+
+# Others
+*.bak
+*.swp
+*.tmp
+
+# Ignore pip/uv
+pip-selfcheck.json
+uv/

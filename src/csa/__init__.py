@@ -11,8 +11,8 @@ Core Components:
 """
 
 from csa.architecture import CognitiveArchitecture
-from csa.knowledge_graph import HierarchicalKnowledgeGraph
 from csa.attention import DynamicRelevanceModulator
+from csa.knowledge_graph import HierarchicalKnowledgeGraph
 from csa.learning import AssociativeFeedbackLayer
 
 __version__ = "0.1.0"

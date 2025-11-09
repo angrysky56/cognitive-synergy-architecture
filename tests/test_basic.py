@@ -3,8 +3,9 @@ Basic tests for CSA components.
 """
 
 import pytest
-from csa.knowledge_graph import HierarchicalKnowledgeGraph
+
 from csa.attention import DynamicRelevanceModulator
+from csa.knowledge_graph import HierarchicalKnowledgeGraph
 from csa.learning import AssociativeFeedbackLayer
 
 
