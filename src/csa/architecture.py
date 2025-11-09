@@ -7,15 +7,15 @@ a Memory-Augmented Neural Network (MANN) with brain-inspired memory capabilities
 
 from typing import Any
 
-from csa.knowledge_graph import HierarchicalKnowledgeGraph
 from csa.attention import DynamicRelevanceModulator
+from csa.knowledge_graph import HierarchicalKnowledgeGraph
 from csa.learning import AssociativeFeedbackLayer
 
 
 class CognitiveArchitecture:
     """
     Main CSA system coordinating HKG, DRM, and AFL components.
-    
+
     The CSA implements a brain-inspired memory system that addresses fundamental
     limitations in LLMs:
     - Proactive Interference → AFL weakens outdated connections
@@ -23,7 +23,7 @@ class CognitiveArchitecture:
     - Narrative Amnesia → HKG maintains persistent world model
     - Complex Reasoning → Structured pathways enable multi-step logic
     """
-    
+
     def __init__(
         self,
         neo4j_uri: str,
@@ -33,7 +33,7 @@ class CognitiveArchitecture:
     ) -> None:
         """
         Initialize the Cognitive Synergy Architecture.
-        
+
         Args:
             neo4j_uri: Neo4j database connection URI
             neo4j_user: Neo4j username
@@ -45,37 +45,37 @@ class CognitiveArchitecture:
             user=neo4j_user,
             password=neo4j_password,
         )
-        
+
         self.drm = DynamicRelevanceModulator(
             embedding_dim=embedding_dim,
         )
-        
+
         self.afl = AssociativeFeedbackLayer(
             graph=self.hkg,
         )
-    
+
     def ingest_text(self, text: str) -> dict[str, Any]:
         """
         Ingest and structure text into the knowledge graph.
-        
+
         Args:
             text: Input text to process and store
-            
+
         Returns:
             Dictionary with ingestion statistics and extracted entities
         """
         # TODO: Implement text parsing and entity extraction
         # TODO: Structure entities/relationships into HKG
         raise NotImplementedError("Text ingestion pipeline pending implementation")
-    
+
     def query(self, question: str, context: str | None = None) -> str:
         """
         Query the CSA with dynamic attention and reasoning.
-        
+
         Args:
             question: Query to answer
             context: Optional additional context
-            
+
         Returns:
             Generated response based on structured memory
         """
@@ -85,7 +85,7 @@ class CognitiveArchitecture:
         # 3. LLM controller generates response using structured context
         # 4. AFL updates graph weights based on feedback
         raise NotImplementedError("Query processing pipeline pending implementation")
-    
+
     def provide_feedback(
         self,
         query: str,
@@ -94,7 +94,7 @@ class CognitiveArchitecture:
     ) -> None:
         """
         Provide feedback to refine the knowledge graph.
-        
+
         Args:
             query: Original query
             response: Generated response
@@ -103,7 +103,7 @@ class CognitiveArchitecture:
         # Beta-like update for correct responses
         # Theta-like update for incorrect responses
         self.afl.update_weights(query, response, is_correct)
-    
+
     def get_stats(self) -> dict[str, Any]:
         """Get system statistics and health metrics."""
         return {
@@ -112,7 +112,7 @@ class CognitiveArchitecture:
             "attention_stats": self.drm.get_stats(),
             "learning_stats": self.afl.get_stats(),
         }
-    
+
     def close(self) -> None:
         """Clean up resources."""
         self.hkg.close()

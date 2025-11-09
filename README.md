@@ -1,5 +1,7 @@
 # Cognitive Synergy Architecture (CSA)
 
+Don't try to use this yet- unfinished and completely theoretical.
+
 **A Neuro-Symbolic Framework for Advanced AI Memory and Reasoning**
 
 ## Overview

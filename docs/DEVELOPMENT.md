@@ -20,7 +20,7 @@ It addresses fundamental limitations through three integrated components:
 ### Installation
 
 ```bash
-cd /home/ty/Repositories/ai_workspace/cognitive-synergy-architecture
+cd /cognitive-synergy-architecture
 
 # Create virtual environment
 uv venv
